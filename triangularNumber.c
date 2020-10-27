@@ -1,4 +1,5 @@
-/* Program to generate a table of triangular numbers
+/* Program to get 5 triangular numbers
+* Takes input from user and displays result before proceeding to next input
 * Triangular numbers have been treated before
 */
 
@@ -7,17 +8,20 @@
 int main (void)
 {
 
-	int n, triangularNumber;
+	int n, number, counter, triangularNumber;
 
-	printf ("TABLE OF TRIANGULAR NUMBERS\n\n");
-	printf (" n Sum from 1 to n\n");
-	printf ("--- ---------------\n");
-	triangularNumber = 0;
+	for (counter = 1; counter <= 5; ++counter)
+	{
+		printf ("\nWhat triangular number do you want to calculate? \n");
+		scanf("%i", &number);
 
-		for ( n = 1; n <= 10; ++n )
-		{
+		triangularNumber = 0;
+	
+		for ( n = 1; n <= number; ++n )
 			triangularNumber += n;
-			printf (" %i %i\n", n, triangularNumber);
-		}
+
+	printf ("Triangular number of %i is %i\n\n", number, triangularNumber);
+	}
+
 return 0;
 }
